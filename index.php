@@ -33,13 +33,13 @@
         <input type="submit" value="Buscar">
         </form>
 
-
+    
      <table class="listagem">
          <?php 
             
             $q = "select c.id, c.nome, c.descricao, c.diasparaemprestar, c.imagem, c.ativo, u.nome unome, u.cidade, u.telefone, u.email from coisa as c join  usuario as u on c.usuario_id = u.id";
             $o = $ordem;
-            
+            // incluido novo comentário
             // Faço a busca no banco de dados para retornar a lista de coisas disponíveis:
             //$q = "select * from coisa";
             
@@ -104,7 +104,9 @@
             
      </table>
     </div>
-    
+    <div>
+        <h1>"incluido alteracao"</h1>
+    </div>
 </body>
 
 <?php include_once "rodape.php"; ?>
